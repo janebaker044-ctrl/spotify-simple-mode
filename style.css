@@ -1,34 +1,48 @@
 
+/* GENERAL PAGE SETTINGS */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #121212;
     color: white;
     text-align: center;
+    line-height: 1.6;
 }
 
+/* HEADER */
 header {
     background-color: #1DB954;
     color: black;
-    padding: 25px;
+    padding: 25px 15px;
 }
 
+/* NAVIGATION */
 nav {
     background-color: #222;
     padding: 15px;
 }
 
 nav a {
+    display: inline-block;
     color: white;
     text-decoration: none;
-    margin: 15px;
+    margin: 10px 15px;
     font-weight: bold;
 }
 
-main {
-    padding: 40px 20px;
+nav a:hover {
+    color: #1DB954;
 }
 
+/* MAIN CONTENT */
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 10px;
+}
+
+/* HOME PAGE BUTTONS */
 .button {
     display: inline-block;
     background-color: #1DB954;
@@ -40,19 +54,99 @@ main {
     font-weight: bold;
 }
 
-.button:hover {
+/* BUTTON HOVER */
+.button:hover,
+button:hover {
     background-color: #1ed760;
 }
 
+/* SEARCH BOX */
+input {
+    padding: 12px;
+    width: 80%;
+    max-width: 350px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin: 10px;
+}
+
+/* SEARCH AND PLAYLIST BUTTONS */
+button {
+    background-color: #1DB954;
+    color: black;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 10px;
+}
+
+/* MUSIC CARDS */
+.music-card {
+    background-color: #222;
+    padding: 20px;
+    margin: 15px auto;
+    border-radius: 10px;
+    max-width: 500px;
+}
+
+/* PLAYLIST LAYOUT */
+.playlist-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* KEYBOARD ACCESSIBILITY */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 4px;
+}
+
+/* FOOTER */
 footer {
     background-color: #222;
     padding: 15px;
     margin-top: 40px;
 }
 
+/* MOBILE PHONE SETTINGS */
 @media (max-width: 600px) {
+
     nav a {
         display: block;
         margin: 12px;
     }
+
+    main {
+        width: 95%;
+        padding: 25px 5px;
+    }
+
+    .button {
+        display: block;
+        margin: 15px auto;
+        max-width: 250px;
+    }
+
+    input {
+        width: 90%;
+        box-sizing: border-box;
+    }
+
+    .playlist-list {
+        grid-template-columns: 1fr;
+    }
+}
+/* MUSIC IMAGE */
+.music-image {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 25px auto;
+    border-radius: 15px;
 }

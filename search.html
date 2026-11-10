@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Music | Spotify Simple Mode</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Spotify Simple Mode</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="search.html">Search</a>
+            <a href="playlists.html">My Playlists</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <h2>Find Your Music</h2>
+        <p>Search for your favourite songs or artists.</p>
+
+        <form id="searchForm">
+            <label for="songSearch">Enter a song or artist:</label>
+
+            <input
+                type="text"
+                id="songSearch"
+                placeholder="Example: Taylor Swift"
+                required
+            >
+
+            <button type="submit">Search</button>
+        </form>
+
+        <p id="searchMessage" role="status" aria-live="polite"></p>
+        
+        <section>
+            <h2>Popular Music</h2>
+
+            <div class="music-card">
+                <h3>Pop Music</h3>
+                <p>Enjoy popular pop songs.</p>
+            </div>
+
+            <div class="music-card">
+                <h3>Relaxing Music</h3>
+                <p>Listen to calm and relaxing music.</p>
+            </div>
+
+            <div class="music-card">
+                <h3>Island Music</h3>
+                <p>Enjoy beautiful island sounds.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Student project: Spotify Simple Mode Prototype</p>
+    </footer>
+
+</body>
+</html>
